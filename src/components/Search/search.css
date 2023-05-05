@@ -1,8 +1,9 @@
 .search input {
     height: 30px;
-    min-width: 15rem;
+    min-width: 18rem;
     border-radius: 5%;
     border: 3px solid #658fb8ca;
+    font-size: 1.2rem;
 }
 
 .search {
