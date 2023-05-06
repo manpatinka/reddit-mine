@@ -1,4 +1,27 @@
 .filters {
+    padding: 0.5rem;
+    display: flex;
+    width: 70%;
+    margin-left: 25%;
+    justify-content: center;
+}
+
+.filter-button {
+    margin: 1rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    width: 6rem;
+    background-color: white;
+    border: none;
+    box-shadow: 3px 3px #6590bb;
+}
+
+.filter-button:hover {
+    box-shadow: none;
     position: relative;
-    top: 20px;
+    left: 3px;
+    top: 3px;
+    -webkit-transition: all 0.4s; 
+    -moz-transition: all 0.4s; 
+    transition: all 0.4s;
 }
