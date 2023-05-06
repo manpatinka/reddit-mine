@@ -2,10 +2,10 @@ import './filters.css';
 
 const Filters = () => {
     return (
-        <div>
-            <button>Hot</button>
-            <button>Top</button>
-            <button>New</button>
+        <div className='filters'>
+            <button className='filter-button'>Hot</button>
+            <button className='filter-button'>Top</button>
+            <button className='filter-button'>New</button>
         </div>
 
     );
