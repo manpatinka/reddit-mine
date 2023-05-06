@@ -1,8 +1,13 @@
+/*
+logo colors: 
+light blue: #86bef6
+dark blue: #6590bb
+*/
+
 .categories {
     display: block;
     width: 20%;
     margin-left: 5%;
     margin-top: 2%;
-    padding: 1rem;
     border: 3px solid #658fb8ca;
 }
