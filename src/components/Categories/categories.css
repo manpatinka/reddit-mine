@@ -6,8 +6,9 @@ dark blue: #6590bb
 
 .categories {
     display: block;
-    width: 20%;
-    margin-left: 5%;
-    margin-top: 2%;
+    position: absolute;
+    top: 5.5rem;
+    left: 2rem;
+    width: 20%; 
     border: 3px solid #658fb8ca;
 }

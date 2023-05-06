@@ -1,9 +1,15 @@
 .search input {
     height: 30px;
-    min-width: 18rem;
+    min-width: 20rem;
     border-radius: 5%;
     border: 3px solid #658fb8ca;
     font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .search input {
+        min-width: none;
+    }
 }
 
 .search {
