@@ -3,7 +3,7 @@ margin: TOP RIGHT BOTTOM LEFT
 */
 
 .category-button {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background: none;
     border: none;
     width: 100%;
@@ -13,6 +13,6 @@ margin: TOP RIGHT BOTTOM LEFT
 }
 
 .category-button:hover {
-    background-color: #658fb8ca;
+    background-color: #658fb897;
     color: white;
 }

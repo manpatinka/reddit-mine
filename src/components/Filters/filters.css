@@ -17,6 +17,7 @@
 }
 
 .filter-button:hover {
+    cursor: pointer;
     box-shadow: none;
     position: relative;
     left: 3px;
@@ -24,4 +25,8 @@
     -webkit-transition: all 0.4s; 
     -moz-transition: all 0.4s; 
     transition: all 0.4s;
+}
+
+.filter-button:active {
+    box-shadow: 3px 3px #6590bb;
 }

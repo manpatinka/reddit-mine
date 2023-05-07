@@ -11,7 +11,7 @@ const Post = ({ category, postedBy, hoursAgo, text, image }) => {
           </div>
           <div className="post-text">{text}</div>
           <div className="post-image">
-            <img src={image} width="50%" />
+            <img src={image} width="70%" />
           </div>
           <div className="comments">Comments component</div>
         </div>

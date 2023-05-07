@@ -5,7 +5,7 @@ const Search = () => {
     
     return (
         <div className="search">
-        <input placeholder="🔎︎ Search..."/>
+        <input placeholder="🔎︎ Search..." />
         </div>
 
     );

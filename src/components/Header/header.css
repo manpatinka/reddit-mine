@@ -11,7 +11,8 @@ dark blue: #6590bb
     border-bottom: 3px solid #658eb8ca;
     justify-content: space-between;
     align-items: center;
-    margin: auto 2rem;
+    padding-left: 2rem;
+    background-color: white;
 }
 
 #header-left {
