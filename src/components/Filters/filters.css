@@ -30,3 +30,13 @@
 .filter-button:active {
     box-shadow: 3px 3px #6590bb;
 }
+
+@media only screen and (max-width: 680px) {
+    .filters {
+        margin-left: 15%;
+    }
+
+    .filter-button {
+        font-size: 1rem;
+    }
+}

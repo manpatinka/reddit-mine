@@ -25,3 +25,13 @@ dark blue: #6590bb
     margin-left: 10px;
     font-family: 'Source Code Pro', monospace;
 }
+
+@media only screen and (max-width: 680px) {
+    #header {
+        padding-left: 0.5rem;
+    }
+
+    #title {
+        display: none;
+    }
+}

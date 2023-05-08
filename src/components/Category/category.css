@@ -16,3 +16,13 @@ margin: TOP RIGHT BOTTOM LEFT
     background-color: #658fb897;
     color: white;
 }
+
+@media only screen and (max-width: 680px) {
+    .category-button {
+        color: white;
+    }
+
+    .category-button:active {
+        color: red;
+    }
+}

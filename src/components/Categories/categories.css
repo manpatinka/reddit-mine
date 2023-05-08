@@ -4,7 +4,7 @@ light blue: #86bef6
 dark blue: #6590bb
 */
 
-.categories {
+.categories-pc {
     display: block;
     position: absolute;
     top: 6rem;
@@ -15,7 +15,44 @@ dark blue: #6590bb
 }
 
 @media only screen and (max-width: 1000px) {
-    .categories {
+    .categories-pc {
         left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .categories-pc {
+        display: none;
+    }
+}
+
+.categories-mobile {
+    display: inline-block;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 35%;
+    background-color: #658fb8ca;
+    color: white;
+    z-index: 100;
+}
+
+.dropdown-button {
+    display: block;
+    padding: 10px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    color: #6590bb;
+    box-shadow: 3px 3px #6590bb;
+}
+
+@media only screen and (min-width: 679px) {
+    .categories-mobile {
+        display: none;
     }
 }
