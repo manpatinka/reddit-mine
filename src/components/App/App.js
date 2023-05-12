@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Feed from '../Feed/Feed';
-import Categories from '../Categories/Categories';
+import Subreddits from '../Subreddits/Subreddits';
 import Filters from '../Filters/Filters';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
      <Header />
      <Filters />
      <Feed />
-     <Categories />
+     <Subreddits />
     </div>
   );
 }

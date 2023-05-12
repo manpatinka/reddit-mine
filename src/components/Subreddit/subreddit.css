@@ -2,7 +2,7 @@
 margin: TOP RIGHT BOTTOM LEFT
 */
 
-.category-button {
+.subreddit-button {
     font-size: 1.1rem;
     background: none;
     border: none;
@@ -12,17 +12,17 @@ margin: TOP RIGHT BOTTOM LEFT
     cursor: pointer;
 }
 
-.category-button:hover {
+.subreddit-button:hover {
     background-color: #658fb897;
     color: white;
 }
 
 @media only screen and (max-width: 680px) {
-    .category-button {
+    .subreddit-button {
         color: white;
     }
 
-    .category-button:active {
+    .subreddit-button:active {
         color: red;
     }
 }

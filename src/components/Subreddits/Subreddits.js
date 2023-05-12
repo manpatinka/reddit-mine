@@ -1,9 +1,9 @@
-import './categories.css';
-import Category from '../Category/Category';
+import './subreddits.css';
+import Subreddit from '../Subreddit/Subreddit';
 import { useState } from 'react';
 
-const Categories = () => {
-  const categories = ['r/puppies', 'r/flowers', 'r/kittens', 'r/books', 'r/vacation'];
+const Subreddits = () => {
+  const subreddits = ['r/puppies', 'r/flowers', 'r/kittens', 'r/books', 'r/vacation'];
   const [menuClicked, setMenuClicked] = useState(false);
 
 
@@ -23,23 +23,23 @@ const Categories = () => {
 
   return (
     <div>
-      <div className='categories-pc'>
+      <div className='subreddits-pc'>
         {
-          categories.map((category, i) => {
+          subreddits.map((subreddit, i) => {
             return (
-              <Category key={i} category={category} />
+              <Subreddit key={i} subreddit={subreddit} />
             )
           })
         }
       </div>
 
-      <div className="categories-mobile">
+      <div className="subreddits-mobile">
         <button className="dropdown-button" onClick={handleClick}>{dropdownSymbol}</button>
-        <div className="categories" style={dropdownMenu}>
+        <div className="subreddits" style={dropdownMenu}>
           {
-            categories.map((category, i) => {
+            subreddits.map((subreddit, i) => {
               return (
-                <Category key={i} category={category} />
+                <Subreddit key={i} subreddit={subreddit} />
               )
             })
           }
@@ -50,4 +50,4 @@ const Categories = () => {
   );
 }
 
-export default Categories;
+export default Subreddits;

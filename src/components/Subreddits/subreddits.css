@@ -4,7 +4,7 @@ light blue: #86bef6
 dark blue: #6590bb
 */
 
-.categories-pc {
+.subreddits-pc {
     display: block;
     position: absolute;
     top: 6rem;
@@ -15,18 +15,18 @@ dark blue: #6590bb
 }
 
 @media only screen and (max-width: 1000px) {
-    .categories-pc {
+    .subreddits-pc {
         left: 2rem;
     }
 }
 
 @media only screen and (max-width: 680px) {
-    .categories-pc {
+    .subreddits-pc {
         display: none;
     }
 }
 
-.categories-mobile {
+.subreddits-mobile {
     display: inline-block;
     position: absolute;
     top: 4rem;
@@ -52,7 +52,7 @@ dark blue: #6590bb
 }
 
 @media only screen and (min-width: 679px) {
-    .categories-mobile {
+    .subreddits-mobile {
         display: none;
     }
 }
