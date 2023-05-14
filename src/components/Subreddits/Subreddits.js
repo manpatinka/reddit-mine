@@ -1,11 +1,17 @@
 import './subreddits.css';
 import Subreddit from '../Subreddit/Subreddit';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectSubreddits, fetchSubreddits } from '../../features/SubredditsSlice';
 
 const Subreddits = () => {
-  const subreddits = ['r/puppies', 'r/flowers', 'r/kittens', 'r/books', 'r/vacation'];
+  const subreddits = useSelector(selectSubreddits);
+  const dispatch = useDispatch();
   const [menuClicked, setMenuClicked] = useState(false);
 
+  useEffect(() => {
+    dispatch(fetchSubreddits())
+  }, [])
 
   const handleClick = (e) => {
     e.preventDefault();
