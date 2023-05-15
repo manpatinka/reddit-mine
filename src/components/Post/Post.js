@@ -1,6 +1,8 @@
 import './post.css';
+import Comments from '../Comments/Comments';
 
 const Post = ({ category, postedBy, hoursAgo, text, image }) => {
+  
 
     return (
         <div className='post'>
@@ -13,7 +15,7 @@ const Post = ({ category, postedBy, hoursAgo, text, image }) => {
           <div className="post-image">
             <img src={image} width="70%" />
           </div>
-          <div className="comments">Comments component</div>
+          <Comments />
         </div>
     );
 }

@@ -1,0 +1,11 @@
+.comment {
+    display: block;
+    border-left: 3px solid #658fb89b;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.comment-details {
+    color: rgb(172, 175, 177);
+    margin-bottom: 10px;
+}
