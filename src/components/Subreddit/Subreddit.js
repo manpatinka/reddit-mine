@@ -1,10 +1,19 @@
+import { useDispatch } from 'react-redux';
 import './subreddit.css';
-import { Link } from 'react-router-dom';
+import { setSelectedSubreddit } from '../../features/FeedSlice';
 
 const Subreddit = ({ subreddit }) => {
 
+    const dispatch = useDispatch();
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        dispatch(setSelectedSubreddit(subreddit));
+    }
+
+
     return (
-            <button className='subreddit-button'>{subreddit}</button>
+            <button className='subreddit-button' onClick={handleClick}>{subreddit}</button>
     );
 }
 
