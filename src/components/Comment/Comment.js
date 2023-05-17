@@ -1,10 +1,10 @@
 import './comment.css';
 
-const Comment = ({ author, text, hoursAgo }) => {
+const Comment = ({ author, text }) => {
 
     return ( 
         <div className='comment'>
-          <div className="comment-details">{author} • {hoursAgo} hours ago</div>
+          <div className="comment-details">{author} • </div>
           <div className="comment-text">{text}</div>
         </div>
      );

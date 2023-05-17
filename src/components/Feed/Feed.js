@@ -27,6 +27,8 @@ const Feed = () => {
               title={post.title}
               text={post.selftext}
               image={post.thumbnail}
+              num_comments={post.num_comments}
+              permalink={post.permalink}
             />
           )
         })

@@ -3,7 +3,7 @@ import Comments from '../Comments/Comments';
 import { setSelectedSubreddit } from '../../features/FeedSlice';
 import { useDispatch } from 'react-redux';
 
-const Post = ({ subreddit, postedBy, title, text, image }) => {
+const Post = ({ num_comments, permalink, subreddit, postedBy, title, text, image }) => {
   const dispatch = useDispatch();
   
   const handleSubredditClick = () => {
@@ -21,7 +21,7 @@ const Post = ({ subreddit, postedBy, title, text, image }) => {
           <div className="post-image">
             <img src={image} width="70%" />
           </div>
-          <Comments />
+          <Comments permalink={permalink} num_comments={num_comments} />
         </div>
     );
 }

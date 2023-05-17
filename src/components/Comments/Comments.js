@@ -1,27 +1,18 @@
 import './comments.css';
 import Comment from '../Comment/Comment';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchComments, selectComments } from '../../features/CommentsSlice';
 
-const Comments = () => {
+
+const Comments = ({num_comments, permalink}) => {
     const [toggleClick, setToggleClick] = useState(false);
+    const dispatch = useDispatch();
+    const commentList = useSelector(selectComments);
 
-    const commentList = [
-        {
-            author: 'zwiebelSuppe',
-            text: 'amazing',
-            hoursAgo: 10
-        },
-        {
-            author: 'pamilau-tave881',
-            text: 'Absolutely disagree! How can people still think that way...',
-            hoursAgo: 7
-        },
-        {
-            author: 'Glam Glow Mud',
-            text: 'you better post some memes',
-            hoursAgo: 6
-        }
-    ]
+    useEffect(() => {
+        dispatch(fetchComments(permalink))
+    }, [permalink])
 
     const toggleComments = (e) => {
         e.preventDefault();
@@ -31,14 +22,13 @@ const Comments = () => {
 
     return (
         <div className="comment-block">
-            <button id="comments-button" onClick={toggleComments}> {toggleClick ? 'Hide comments' : `${commentList.length} comments`}</button>
+            <button id="comments-button" onClick={toggleComments}> {toggleClick ? 'Hide comments' : `${num_comments} comments`}</button>
             <div className="comment-list" style={toggleClick ? {display: 'block'} : {display: 'none'}}>
                 {commentList.map((comment, i) => (
                     <Comment
                         key={i}
                         author={comment.author}
-                        text={comment.text}
-                        hoursAgo={comment.hoursAgo}
+                        text={comment.body}
                     />
                 ))}
             </div>
