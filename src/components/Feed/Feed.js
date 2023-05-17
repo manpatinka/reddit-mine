@@ -1,24 +1,25 @@
 import './feed.css';
 import Post from '../Post/Post';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFeed, selectFeed, selectSelectedSubreddit } from '../../features/FeedSlice';
+import { fetchFeed, selectFeed, selectSelectedFilter, selectSelectedSubreddit } from '../../features/FeedSlice';
 import { useEffect } from 'react';
 
 const Feed = () => {
-  const posts = useSelector(selectFeed);
+  const feed = useSelector(selectFeed);
   const selectedSubreddit = useSelector(selectSelectedSubreddit);
+  const selectedFilter = useSelector(selectSelectedFilter);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchFeed(selectedSubreddit))
-  }, [selectedSubreddit])
+    dispatch(fetchFeed({selectedSubreddit, selectedFilter}))
+  }, [selectedSubreddit, selectedFilter]);
 
 
 
   return (
     <div className='posts'>
       {
-        posts.map(post => {
+        feed.map(post => {
           return (
             <Post 
               key={post.id} 

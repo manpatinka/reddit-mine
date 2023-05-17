@@ -6,7 +6,7 @@ const Subreddit = ({ subreddit }) => {
 
     const dispatch = useDispatch();
 
-    const handleClick = (e) => {
+    const handleClick = () => {
         dispatch(setSelectedSubreddit(subreddit));
     }
 

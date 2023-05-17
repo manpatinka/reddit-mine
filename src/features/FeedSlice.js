@@ -2,8 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchFeed = createAsyncThunk(
     'feed/fetchFeed',
-    async(selectedSubreddit) => {
-        const res = await fetch(`https://www.reddit.com/${selectedSubreddit}.json`);
+    async(args) => {
+        const subreddit = args.selectedSubreddit;
+        const filter = args.selectedFilter;
+        const res = await fetch(`https://www.reddit.com/${subreddit}/${filter}.json`);
         const json = await res.json();
         const feed = json.data.children.map(post => post.data);
         return feed;
@@ -15,12 +17,16 @@ const feedSlice = createSlice({
     initialState: {
         feed: [],
         selectedSubreddit: 'r/popular',
+        selectedFilter: 'top',
         isLoading: false,
         hasError: false
     },
     reducers: {
         setSelectedSubreddit(state, action) {
             state.selectedSubreddit = action.payload;
+        },
+        setSelectedFilter(state, action) {
+            state.selectedFilter = action.payload
         }
     },
     extraReducers: {
@@ -43,5 +49,6 @@ const feedSlice = createSlice({
 
 export const selectFeed = state => state.feed.feed;
 export const selectSelectedSubreddit = state => state.feed.selectedSubreddit;
-export const { setSelectedSubreddit } = feedSlice.actions;
+export const selectSelectedFilter = state => state.feed.selectedFilter;
+export const { setSelectedSubreddit, setSelectedFilter } = feedSlice.actions;
 export default feedSlice.reducer;
