@@ -7,7 +7,6 @@ const Subreddit = ({ subreddit }) => {
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
-        e.preventDefault();
         dispatch(setSelectedSubreddit(subreddit));
     }
 

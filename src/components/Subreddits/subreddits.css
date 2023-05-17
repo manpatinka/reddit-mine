@@ -20,7 +20,7 @@ dark blue: #6590bb
     }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 750px) {
     .subreddits-pc {
         display: none;
     }
@@ -29,7 +29,7 @@ dark blue: #6590bb
 .subreddits-mobile {
     display: inline-block;
     position: absolute;
-    top: 4rem;
+    top: 5rem;
     left: 0;
     width: 35%;
     background-color: #658fb8ca;
@@ -51,7 +51,7 @@ dark blue: #6590bb
     box-shadow: 3px 3px #6590bb;
 }
 
-@media only screen and (min-width: 679px) {
+@media only screen and (min-width: 749px) {
     .subreddits-mobile {
         display: none;
     }

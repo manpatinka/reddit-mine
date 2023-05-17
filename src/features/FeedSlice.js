@@ -14,7 +14,7 @@ const feedSlice = createSlice({
     name: 'feed',
     initialState: {
         feed: [],
-        selectedSubreddit: 'r/Home',
+        selectedSubreddit: 'r/popular',
         isLoading: false,
         hasError: false
     },

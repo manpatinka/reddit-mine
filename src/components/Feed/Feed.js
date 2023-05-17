@@ -24,6 +24,7 @@ const Feed = () => {
               key={post.id} 
               subreddit={post.subreddit_name_prefixed}
               postedBy={post.author}
+              title={post.title}
               text={post.selftext}
               image={post.thumbnail}
             />

@@ -30,11 +30,15 @@
     font-size: 0.8rem;
 }
 
+.post-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .post-text {
     text-align: left;
     margin-left: 10%;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
 }
 
 .post-image img {
@@ -50,4 +54,17 @@
 
 .comments {
     margin-bottom: 1rem;
+}
+
+.post-subreddit {
+    border: none;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.post-subreddit:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }

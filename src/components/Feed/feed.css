@@ -3,7 +3,7 @@
     margin-left: 25%;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 750px) {
     .posts {
         width: 95%;
         margin-left: 1%;
