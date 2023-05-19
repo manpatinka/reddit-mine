@@ -18,6 +18,7 @@ const feedSlice = createSlice({
         feed: [],
         selectedSubreddit: 'r/popular',
         selectedFilter: 'top',
+        searchTerm: '',
         isLoading: false,
         hasError: false
     },
@@ -27,6 +28,9 @@ const feedSlice = createSlice({
         },
         setSelectedFilter(state, action) {
             state.selectedFilter = action.payload
+        },
+        setSearchTerm(state, action) {
+            state.searchTerm = action.payload
         }
     },
     extraReducers: {
@@ -50,5 +54,6 @@ const feedSlice = createSlice({
 export const selectFeed = state => state.feed.feed;
 export const selectSelectedSubreddit = state => state.feed.selectedSubreddit;
 export const selectSelectedFilter = state => state.feed.selectedFilter;
-export const { setSelectedSubreddit, setSelectedFilter } = feedSlice.actions;
+export const selectSearchTerm = state => state.feed.searchTerm;
+export const { setSelectedSubreddit, setSelectedFilter, setSearchTerm } = feedSlice.actions;
 export default feedSlice.reducer;

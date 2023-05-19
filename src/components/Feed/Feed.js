@@ -1,13 +1,14 @@
 import './feed.css';
 import Post from '../Post/Post';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFeed, selectFeed, selectSelectedFilter, selectSelectedSubreddit } from '../../features/FeedSlice';
+import { fetchFeed, selectFeed, selectSelectedFilter, selectSelectedSubreddit, selectSearchTerm } from '../../features/FeedSlice';
 import { useEffect } from 'react';
 
 const Feed = () => {
-  const feed = useSelector(selectFeed);
+  let feed = useSelector(selectFeed);
   const selectedSubreddit = useSelector(selectSelectedSubreddit);
   const selectedFilter = useSelector(selectSelectedFilter);
+  const searchTerm = useSelector(selectSearchTerm);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const Feed = () => {
   return (
     <div className='posts'>
       {
-        feed.map(post => {
+        feed.filter(post => post.title.toLowerCase().includes(searchTerm.toLowerCase())).map(post => {
           return (
             <Post 
               key={post.id} 
