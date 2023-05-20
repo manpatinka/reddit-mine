@@ -1,16 +1,15 @@
 #comments-button {
     margin-bottom: 10px;
-    padding: 10px;
     border: none;
-    background-color: #658fb855;;
-    border: 1px solid #658fb897;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    background-color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
 }
 
 #comments-button:hover {
     cursor: pointer;
-    background-color: #658fb8ae;
+    color: #6590bb;
 }
 
 .comment-list {

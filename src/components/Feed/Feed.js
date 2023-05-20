@@ -28,7 +28,8 @@ const Feed = () => {
               postedBy={post.author}
               title={post.title}
               text={post.selftext}
-              image={post.thumbnail}
+              media_url={post.is_video ? post.media.reddit_video.fallback_url : post.url}
+              is_video={post.is_video}
               num_comments={post.num_comments}
               permalink={post.permalink}
             />
