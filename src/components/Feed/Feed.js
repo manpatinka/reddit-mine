@@ -26,7 +26,7 @@ const Feed = () => {
     {feedError && <div id="feed-error">Oops, there occured an error while loading the feed.</div>}
     
     {feedLoading && <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
-    { 
+    { !feedLoading &&
         feed.filter(post => post.title.toLowerCase().includes(searchTerm.toLowerCase())).map(post => {
           return (
             <Post 
