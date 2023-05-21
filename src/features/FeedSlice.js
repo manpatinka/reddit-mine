@@ -55,5 +55,9 @@ export const selectFeed = state => state.feed.feed;
 export const selectSelectedSubreddit = state => state.feed.selectedSubreddit;
 export const selectSelectedFilter = state => state.feed.selectedFilter;
 export const selectSearchTerm = state => state.feed.searchTerm;
+
+export const selectFeedLoading = state => state.feed.isLoading;
+export const selectFeedError = state => state.feed.hasError;
+
 export const { setSelectedSubreddit, setSelectedFilter, setSearchTerm } = feedSlice.actions;
 export default feedSlice.reducer;

@@ -3,7 +3,7 @@ import Comments from '../Comments/Comments';
 import { setSelectedSubreddit } from '../../features/FeedSlice';
 import { useDispatch } from 'react-redux';
 
-const Post = ({ num_comments, permalink, subreddit, postedBy, title, text, media_url, is_video }) => {
+const Post = ({ is_self, num_comments, permalink, subreddit, postedBy, title, text, media_url, is_video }) => {
   const dispatch = useDispatch();
   
   const handleSubredditClick = () => {
@@ -18,7 +18,8 @@ const Post = ({ num_comments, permalink, subreddit, postedBy, title, text, media
           </div>
           <div className="post-title">{title}</div>
           <div className="post-text">{text}</div>
-          <div className="post-media">
+          { !is_self &&
+            <div className="post-media">
             {
               is_video ? 
                 <video 
@@ -32,8 +33,8 @@ const Post = ({ num_comments, permalink, subreddit, postedBy, title, text, media
                   width="60%" 
                 />
             }
-            
           </div>
+          }
           <Comments permalink={permalink} num_comments={num_comments} />
         </div>
     );

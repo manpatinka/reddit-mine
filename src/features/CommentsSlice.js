@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const fetchComments = createAsyncThunk(
     'comments/fetchComments',
     async(permalink) => {
-        const res = await fetch(`https://www.reddit.com${permalink}.json`);
+        const res = await fetch(`https://www.reddi.com${permalink}.json`);
         const json = await res.json();
         const comments = json[1].data.children.map(comments => comments.data);
         return comments;
@@ -38,4 +38,6 @@ const commentsSlice = createSlice({
 })
 
 export const selectComments = state => state.comments.comments;
+export const selectCommentsError = state => state.comments.hasError;
+
 export default commentsSlice.reducer;
