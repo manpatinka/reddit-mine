@@ -11,7 +11,7 @@ dark blue: #6590bb
     border-bottom: 3px solid #658eb8ca;
     justify-content: space-between;
     align-items: center;
-    padding-left: 2rem;
+    padding-left: 1rem;
     background-color: white;
 }
 
@@ -24,6 +24,17 @@ dark blue: #6590bb
     font-size: 1.2rem;
     margin-left: 10px;
     font-family: 'Source Code Pro', monospace;
+}
+
+#logo-button {
+    border: none;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+#logo-button:hover {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 680px) {
